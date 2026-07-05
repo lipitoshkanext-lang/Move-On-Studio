@@ -327,6 +327,100 @@ body.menu-open {
   animation: marquee 32s linear infinite;
 }
 
+.custom-select {
+  position: relative;
+}
+
+.custom-select-trigger {
+  width: 100%;
+  cursor: pointer;
+}
+
+.custom-select-trigger[data-filled="true"] {
+  color: #fff;
+}
+
+.custom-select-trigger[aria-expanded="true"] {
+  border-color: rgba(201, 139, 122, 0.55);
+}
+
+.custom-select-trigger[aria-expanded="true"] .custom-select-chevron {
+  transform: rotate(180deg);
+}
+
+.custom-select-chevron {
+  transition: transform 0.2s ease;
+}
+
+.custom-select-list {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  max-height: 16rem;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    rgba(22, 20, 32, 0.97);
+  box-shadow: 0 24px 60px rgba(6, 5, 10, 0.5);
+  backdrop-filter: blur(20px);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201, 139, 122, 0.45) rgba(255, 255, 255, 0.06);
+}
+
+.custom-select-list[hidden] {
+  display: none;
+}
+
+.custom-select-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-select-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.custom-select-list::-webkit-scrollbar-thumb {
+  background: rgba(201, 139, 122, 0.45);
+  border-radius: 999px;
+}
+
+.custom-select-list li {
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.78);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.custom-select-list li:not(:last-child) {
+  margin-bottom: 0.15rem;
+}
+
+.custom-select-list li:hover,
+.custom-select-list li[data-active="true"] {
+  background: rgba(201, 139, 122, 0.16);
+  color: #fff;
+}
+
+.custom-select-list li[aria-selected="true"] {
+  background: rgba(201, 139, 122, 0.26);
+  color: #fff;
+  font-weight: 600;
+}
+
+.custom-select-trigger[data-error="true"] {
+  border-color: rgba(214, 141, 124, 0.65);
+}
+
 .mobile-cta {
   position: fixed;
   left: 0.75rem;

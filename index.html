@@ -381,24 +381,40 @@
               class="rounded-xl border border-white/12 bg-black/25 px-4 py-3 text-white placeholder:text-white/35 focus:border-clay focus:ring-clay"
             >
           </div>
-          <div class="grid gap-2">
-            <label for="booking-direction" class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Направление</label>
-            <select
-              id="booking-direction"
-              name="direction"
-              required
-              class="rounded-xl border border-white/12 bg-black/25 px-4 py-3 text-white focus:border-clay focus:ring-clay"
+          <div class="custom-select grid gap-2" data-select>
+            <label id="booking-direction-label" class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Направление</label>
+            <button
+              type="button"
+              id="booking-direction-trigger"
+              class="custom-select-trigger flex items-center justify-between gap-3 rounded-xl border border-white/12 bg-black/25 px-4 py-3 text-left text-white/40 transition focus:border-clay focus:outline-none focus-visible:ring-2 focus-visible:ring-clay"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-labelledby="booking-direction-label booking-direction-trigger"
             >
-              <option value="" disabled selected>Выберите направление</option>
-              <option>Пилатес на реформере</option>
-              <option>Пилатес мат / Full Body</option>
-              <option>Стретчинг / стретчинг в гамаках</option>
-              <option>Хатха-йога / йога в гамаках</option>
-              <option>Барре / Low body</option>
-              <option>Здоровая спина</option>
-              <option>Body ballet</option>
-              <option>Индивидуальная тренировка</option>
-            </select>
+              <span data-select-value>Выберите направление</span>
+              <svg class="custom-select-chevron h-4 w-4 flex-none text-white/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <input type="hidden" id="booking-direction" name="direction">
+            <ul
+              id="booking-direction-list"
+              class="custom-select-list"
+              role="listbox"
+              tabindex="-1"
+              aria-labelledby="booking-direction-label"
+              hidden
+            >
+              <li role="option" tabindex="-1" data-value="Пилатес на реформере">Пилатес на реформере</li>
+              <li role="option" tabindex="-1" data-value="Пилатес мат / Full Body">Пилатес мат / Full Body</li>
+              <li role="option" tabindex="-1" data-value="Стретчинг / стретчинг в гамаках">Стретчинг / стретчинг в гамаках</li>
+              <li role="option" tabindex="-1" data-value="Хатха-йога / йога в гамаках">Хатха-йога / йога в гамаках</li>
+              <li role="option" tabindex="-1" data-value="Барре / Low body">Барре / Low body</li>
+              <li role="option" tabindex="-1" data-value="Здоровая спина">Здоровая спина</li>
+              <li role="option" tabindex="-1" data-value="Body ballet">Body ballet</li>
+              <li role="option" tabindex="-1" data-value="Индивидуальная тренировка">Индивидуальная тренировка</li>
+            </ul>
+            <p class="custom-select-error hidden text-xs text-blush" id="booking-direction-error">Выберите направление из списка.</p>
           </div>
           <div class="grid gap-2">
             <label for="booking-time" class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Удобное время</label>
