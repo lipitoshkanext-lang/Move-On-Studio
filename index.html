@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move On Studio на Рашпилевской | Пилатес, реформер, йога и стретчинг в Краснодаре</title>
+  <meta
+    name="description"
+    content="Move On Studio в Краснодаре на Рашпилевской, 224. Пилатес на реформере и мате, йога, барре, стретчинг и функциональные тренировки для спины в одной студии."
+  >
+  <meta
+    name="keywords"
+    content="Move On Studio, Краснодар, Рашпилевская 224, пилатес, реформер, йога, барре, стретчинг, студия фитнеса"
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Move On Studio | Пилатес и йога-студия в Краснодаре">
+  <meta
+    property="og:description"
+    content="Пилатес на реформере, мат-пилатес, йога, барре и стретчинг в одной студии на Рашпилевской, 224."
+  >
+  <meta property="og:locale" content="ru_RU">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#161420",
+            charcoal: "#1e1b29",
+            clay: "#c98b7a",
+            blush: "#e2b6a6",
+            sage: "#9db38f",
+            linen: "#efe9e2"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Fraunces", "serif"]
+          },
+          boxShadow: {
+            soft: "0 30px 90px rgba(15, 12, 20, 0.35)",
+            glow: "0 0 0 1px rgba(201, 139, 122, 0.22), 0 20px 80px rgba(201, 139, 122, 0.14)"
+          },
+          backgroundImage: {
+            "hero-glow":
+              "radial-gradient(circle at 12% 18%, rgba(201, 139, 122, 0.24), transparent 30%), radial-gradient(circle at 82% 12%, rgba(157, 179, 143, 0.16), transparent 26%), linear-gradient(180deg, rgba(22, 20, 32, 0.2), rgba(22, 20, 32, 0.92))"
+          },
+          animation: {
+            float: "float 10s ease-in-out infinite",
+            marquee: "marquee 32s linear infinite"
+          },
+          keyframes: {
+            float: {
+              "0%, 100%": { transform: "translateY(0px)" },
+              "50%": { transform: "translateY(-14px)" }
+            },
+            marquee: {
+              "0%": { transform: "translateX(0)" },
+              "100%": { transform: "translateX(-50%)" }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-ink font-sans text-linen antialiased selection:bg-clay/30 selection:text-white">
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(201,139,122,0.16),_transparent_28%),radial-gradient(circle_at_75%_10%,_rgba(157,179,143,0.12),_transparent_20%),linear-gradient(180deg,_#181523,_#161420_44%,_#191625)]"></div>
+
+  <header class="fixed inset-x-0 top-0 z-50 transition-all duration-300" data-header>
+    <div class="mx-auto flex w-[min(100%-1.5rem,1280px)] items-center justify-between rounded-full border border-white/10 bg-black/25 px-4 py-3 backdrop-blur-xl md:mt-4 md:px-6">
+      <a href="#hero" class="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay/60">
+        <span class="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 font-display text-lg text-blush">MO</span>
+        <div>
+          <span class="block text-[0.68rem] uppercase tracking-[0.34em] text-blush/80">Краснодар</span>
+          <strong class="block text-base font-semibold text-white">Move On Studio</strong>
+        </div>
+      </a>
+
+      <button
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white md:hidden"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        data-menu-toggle
+      >
+        <span class="sr-only">Открыть меню</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+
+      <nav
+        id="site-menu"
+        class="nav-panel absolute left-3 right-3 top-[calc(100%+0.75rem)] hidden flex-col gap-4 rounded-[2rem] border border-white/10 bg-[#1a1726]/95 p-5 shadow-soft backdrop-blur-2xl md:static md:flex md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0 md:shadow-none"
+      >
+        <a href="#directions" class="text-sm text-white/72 transition hover:text-white">Направления</a>
+        <a href="#schedule" class="text-sm text-white/72 transition hover:text-white">Расписание</a>
+        <a href="#why" class="text-sm text-white/72 transition hover:text-white">Почему мы</a>
+        <a href="#reviews" class="text-sm text-white/72 transition hover:text-white">Отзывы</a>
+        <a href="#contacts" class="text-sm text-white/72 transition hover:text-white">Контакты</a>
+        <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border border-clay/40 bg-clay px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-blush">
+          Записаться на пробное
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="hero">
+    <section class="relative min-h-screen overflow-hidden pt-28 md:pt-6">
+      <div class="absolute inset-0 bg-hero-glow"></div>
+      <div aria-hidden="true" class="absolute -right-24 top-24 h-[26rem] w-[26rem] rounded-full bg-clay/10 blur-[120px] animate-float"></div>
+      <div aria-hidden="true" class="absolute -left-16 bottom-10 h-[22rem] w-[22rem] rounded-full bg-sage/10 blur-[110px]"></div>
+
+      <div class="relative mx-auto flex min-h-[calc(100vh-7rem)] w-[min(100%-1.5rem,1280px)] items-end pb-10 md:items-center md:pb-0">
+        <div class="grid w-full gap-10 lg:grid-cols-[minmax(0,1.1fr)_24rem] lg:items-end">
+          <div class="reveal max-w-4xl">
+            <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-[0.72rem] uppercase tracking-[0.28em] text-white/75 backdrop-blur-xl">
+              <span class="h-2.5 w-2.5 rounded-full bg-blush shadow-[0_0_24px_rgba(226,182,166,0.85)]"></span>
+              Студия на Рашпилевской, 224
+            </div>
+            <h1 class="max-w-5xl font-display text-[clamp(2.9rem,7.6vw,6.8rem)] leading-[0.96] tracking-[-0.03em] text-white">
+              Тело двигается лучше, когда есть план на неделю.
+            </h1>
+            <p class="mt-6 max-w-2xl text-base leading-8 text-white/74 md:text-lg">
+              Move On Studio собирает пилатес на реформере и мате, йогу, барре и стретчинг в одном расписании — с записью в пару кликов вместо звонков и ожидания ответа в директе.
+            </p>
+
+            <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+              <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full bg-clay px-7 py-4 text-base font-semibold text-ink transition duration-300 hover:-translate-y-1 hover:bg-blush">
+                Записаться на пробное занятие
+              </a>
+              <a href="#directions" class="inline-flex items-center justify-center rounded-full border border-white/14 bg-white/8 px-7 py-4 text-base font-semibold text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/12">
+                Смотреть направления
+              </a>
+            </div>
+
+            <div class="mt-10 grid gap-4 sm:grid-cols-3">
+              <article class="rounded-[1.8rem] border border-white/10 bg-black/20 p-5 backdrop-blur-xl">
+                <span class="block text-[0.72rem] uppercase tracking-[0.28em] text-white/45">Формат</span>
+                <strong class="mt-3 block text-2xl font-semibold text-white">Группа и соло</strong>
+                <p class="mt-2 text-sm leading-6 text-white/60">Малые группы на оборудовании и персональные занятия с тренером.</p>
+              </article>
+              <article class="rounded-[1.8rem] border border-white/10 bg-black/20 p-5 backdrop-blur-xl">
+                <span class="block text-[0.72rem] uppercase tracking-[0.28em] text-white/45">Направления</span>
+                <strong class="mt-3 block text-2xl font-semibold text-white">10+ практик</strong>
+                <p class="mt-2 text-sm leading-6 text-white/60">От реформер-пилатеса до йоги в гамаках и функциональной растяжки.</p>
+              </article>
+              <article class="rounded-[1.8rem] border border-white/10 bg-black/20 p-5 backdrop-blur-xl">
+                <span class="block text-[0.72rem] uppercase tracking-[0.28em] text-white/45">Запись</span>
+                <strong class="mt-3 block text-2xl font-semibold text-white">Онлайн, без звонков</strong>
+                <p class="mt-2 text-sm leading-6 text-white/60">Выбор занятия и времени сразу видно в расписании на сайте.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="reveal reveal-delay hidden rounded-[2rem] border border-white/10 bg-white/8 p-6 shadow-glow backdrop-blur-2xl lg:block">
+            <p class="text-xs uppercase tracking-[0.3em] text-blush/90">Что внутри студии</p>
+            <h2 class="mt-4 font-display text-3xl leading-tight text-white">Реформеры, коврики, гамаки и зал под барре</h2>
+            <div class="mt-6 grid gap-4">
+              <div class="rounded-[1.4rem] border border-white/8 bg-black/25 p-4">
+                <span class="text-xs uppercase tracking-[0.24em] text-white/42">Адрес</span>
+                <strong class="mt-2 block text-lg font-semibold text-white">Рашпилевская, 224</strong>
+              </div>
+              <div class="rounded-[1.4rem] border border-white/8 bg-black/25 p-4">
+                <span class="text-xs uppercase tracking-[0.24em] text-white/42">Instagram</span>
+                <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="mt-2 block text-lg font-semibold text-white transition hover:text-blush">
+                  @moveon.studio
+                </a>
+              </div>
+              <div class="rounded-[1.4rem] border border-white/8 bg-black/25 p-4">
+                <span class="text-xs uppercase tracking-[0.24em] text-white/42">Формат записи</span>
+                <span class="mt-2 block text-lg font-semibold text-white">Сайт → расписание → бронь места</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-white/8 bg-white/[0.02] py-4">
+      <div class="marquee-track overflow-hidden">
+        <div class="marquee flex min-w-max items-center gap-10 text-sm uppercase tracking-[0.28em] text-white/45">
+          <span>Пилатес на реформере</span>
+          <span>Мат-пилатес</span>
+          <span>Хатха-йога</span>
+          <span>Йога в гамаках</span>
+          <span>Барре</span>
+          <span>Стретчинг</span>
+          <span>Здоровая спина</span>
+          <span>Full Body</span>
+          <span>Пилатес на реформере</span>
+          <span>Мат-пилатес</span>
+          <span>Хатха-йога</span>
+          <span>Йога в гамаках</span>
+          <span>Барре</span>
+          <span>Стретчинг</span>
+          <span>Здоровая спина</span>
+          <span>Full Body</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-shell">
+      <div class="mx-auto w-[min(100%-1.5rem,1280px)]">
+        <div class="reveal max-w-3xl">
+          <p class="section-kicker">О студии</p>
+          <h2 class="section-title">Move On Studio — пространство на Рашпилевской для тех, кто выбирает тело, а не абонемент наугад.</h2>
+          <p class="section-copy">
+            Здесь совмещены практики на оборудовании и на мате: можно закрыть и силовую часть, и растяжку, и восстановление спины в одном месте, не перескакивая между разными студиями города.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 lg:grid-cols-3">
+          <article class="reveal premium-card lg:col-span-1">
+            <span class="card-index">01</span>
+            <h3 class="card-title">Малые группы</h3>
+            <p class="card-copy">
+              Тренер видит каждого на занятии и успевает поправить технику — вместо привычной толпы у зеркала.
+            </p>
+          </article>
+          <article class="reveal reveal-delay premium-card lg:col-span-1">
+            <span class="card-index">02</span>
+            <h3 class="card-title">Разные задачи — одно место</h3>
+            <p class="card-copy">
+              Реформер и мат-пилатес, йога, барре и стретчинг закрывают силу, гибкость и восстановление без переезда по городу.
+            </p>
+          </article>
+          <article class="reveal reveal-delay-2 premium-card lg:col-span-1">
+            <span class="card-index">03</span>
+            <h3 class="card-title">Понятная запись</h3>
+            <p class="card-copy">
+              Расписание на сайте показывает свободные места сразу — не нужно ждать ответа в директе, чтобы понять, есть ли слот.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="directions" class="section-shell pt-0">
+      <div class="mx-auto w-[min(100%-1.5rem,1280px)]">
+        <div class="reveal max-w-3xl">
+          <p class="section-kicker">Направления</p>
+          <h2 class="section-title">Практики, которые можно комбинировать под свою неделю.</h2>
+          <p class="section-copy">
+            Каждое направление можно взять отдельно или собрать личный план на неделю — тренер студии помогает распределить нагрузку между силовыми и восстановительными занятиями.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal experience-card">
+            <span class="experience-badge">На оборудовании</span>
+            <h3>Пилатес на реформере</h3>
+            <p>Силовая работа с сопротивлением пружин — мягкая нагрузка на суставы и точный контроль движения.</p>
+          </article>
+          <article class="reveal reveal-delay experience-card">
+            <span class="experience-badge">Мат-пилатес</span>
+            <h3>Пилатес мат / Full Body</h3>
+            <p>Работа с собственным весом на коврике — глубокие мышцы кора, осанка и общий тонус тела.</p>
+          </article>
+          <article class="reveal reveal-delay-2 experience-card">
+            <span class="experience-badge">Гибкость</span>
+            <h3>Стретчинг и стретчинг в гамаках</h3>
+            <p>Растяжка на полу и с поддержкой гамака — снимает зажимы после силовых тренировок и сидячего дня.</p>
+          </article>
+          <article class="reveal experience-card">
+            <span class="experience-badge">Йога</span>
+            <h3>Хатха-йога / йога в гамаках</h3>
+            <p>Дыхание, баланс и мягкая работа с телом — отдельно на мате или с поддержкой воздушного гамака.</p>
+          </article>
+          <article class="reveal reveal-delay experience-card">
+            <span class="experience-badge">Тонус</span>
+            <h3>Барре / Low body</h3>
+            <p>Точечная работа на ноги и ягодицы у станка — мелкая амплитуда, ощутимый результат за несколько недель.</p>
+          </article>
+          <article class="reveal reveal-delay-2 experience-card">
+            <span class="experience-badge">Забота о спине</span>
+            <h3>Здоровая спина</h3>
+            <p>Мягкая программа для тех, кто много сидит за компьютером — снятие напряжения и укрепление мышечного корсета.</p>
+          </article>
+          <article class="reveal experience-card">
+            <span class="experience-badge">Пластика</span>
+            <h3>Body ballet</h3>
+            <p>Балетные элементы для осанки и походки — работа на выворотность, координацию и лёгкость движений.</p>
+          </article>
+          <article class="reveal reveal-delay experience-card">
+            <span class="experience-badge">Персонально</span>
+            <h3>Индивидуальные тренировки</h3>
+            <p>Личный план под конкретную задачу — от реабилитации после травмы до подготовки к соревнованиям.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="section-shell pt-0">
+      <div class="mx-auto w-[min(100%-1.5rem,1280px)]">
+        <div class="reveal max-w-3xl">
+          <p class="section-kicker">Расписание</p>
+          <h2 class="section-title">Пример недели — на сайте расписание обновляется под реальную загрузку зала.</h2>
+          <p class="section-copy">
+            Ниже — ориентир по формату дня, чтобы показать, как выглядит расписание на сайте. Финальная сетка занятий и свободные места будут синхронизированы с рабочим календарём студии.
+          </p>
+        </div>
+
+        <div class="mt-12 overflow-x-auto rounded-[1.8rem] border border-white/10 bg-white/[0.03]">
+          <table class="w-full min-w-[640px] border-collapse text-left">
+            <thead>
+              <tr class="border-b border-white/10 text-[0.72rem] uppercase tracking-[0.2em] text-white/45">
+                <th class="px-6 py-4 font-semibold">Время</th>
+                <th class="px-6 py-4 font-semibold">Утро</th>
+                <th class="px-6 py-4 font-semibold">День</th>
+                <th class="px-6 py-4 font-semibold">Вечер</th>
+              </tr>
+            </thead>
+            <tbody class="[&>tr:not(:last-child)]:border-b [&>tr]:border-white/8">
+              <tr>
+                <td class="px-6 py-5 text-sm font-semibold uppercase tracking-[0.16em] text-white/45">Пн / Ср / Пт</td>
+                <td class="px-6 py-5">Пилатес на реформере</td>
+                <td class="px-6 py-5">Здоровая спина</td>
+                <td class="px-6 py-5">Барре</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-5 text-sm font-semibold uppercase tracking-[0.16em] text-white/45">Вт / Чт</td>
+                <td class="px-6 py-5">Хатха-йога</td>
+                <td class="px-6 py-5">Мат-пилатес / Full Body</td>
+                <td class="px-6 py-5">Стретчинг в гамаках</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-5 text-sm font-semibold uppercase tracking-[0.16em] text-white/45">Сб</td>
+                <td class="px-6 py-5">Йога в гамаках</td>
+                <td class="px-6 py-5">Body ballet</td>
+                <td class="px-6 py-5">Индивидуальные тренировки</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="section-shell pt-0">
+      <div class="mx-auto grid w-[min(100%-1.5rem,1280px)] gap-5 lg:grid-cols-2">
+        <article class="reveal mood-panel">
+          <div>
+            <p class="section-kicker">Онлайн-запись</p>
+            <h2 class="section-title !max-w-none">Свободные места видно сразу, без переписки в директе.</h2>
+          </div>
+          <p class="section-copy">
+            Клиент выбирает направление, день и время в расписании на сайте — бронь занятия подтверждается сразу, а администратор не тратит вечер на ответы одним и тем же вопросом «а места есть?».
+          </p>
+        </article>
+
+        <article class="reveal reveal-delay mood-panel">
+          <div>
+            <p class="section-kicker">Абонементы онлайн</p>
+            <h2 class="section-title !max-w-none">Продажа пакетов занятий вперёд, а не по одному визиту.</h2>
+          </div>
+          <p class="section-copy">
+            Онлайн-оплата абонемента на сайте увеличивает средний чек за счёт пакетов на месяц вместо разовых занятий и снижает число клиентов, которые «зайдут в другой раз» и не возвращаются.
+          </p>
+        </article>
+
+        <article class="reveal mood-panel">
+          <div>
+            <p class="section-kicker">Меньше пропусков</p>
+            <h2 class="section-title !max-w-none">Напоминание о записи вместо пустого места в группе.</h2>
+          </div>
+          <p class="section-copy">
+            Подтверждение и напоминание о занятии снижают число неявок — место в малой группе стоит дорого, и пустой коврик — это всегда упущенная выручка.
+          </p>
+        </article>
+
+        <article class="reveal reveal-delay mood-panel">
+          <div>
+            <p class="section-kicker">Видимость в поиске</p>
+            <h2 class="section-title !max-w-none">Сайт находят те, кто ищет направление, а не бренд.</h2>
+          </div>
+          <p class="section-copy">
+            Человек, который гуглит «пилатес на реформере Краснодар», сейчас находит агрегаторы и конкурентов — собственный сайт даёт студии шанс попасть в эту выдачу напрямую.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="reviews" class="section-shell pt-0">
+      <div class="mx-auto w-[min(100%-1.5rem,1280px)]">
+        <div class="reveal max-w-3xl">
+          <p class="section-kicker">Формат отзывов</p>
+          <h2 class="section-title">Место для реальных отзывов клиенток студии.</h2>
+          <p class="section-copy">
+            Здесь на боевом сайте появятся настоящие отзывы из Instagram и 2ГИС — макет показывает, как они будут выглядеть на странице.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 lg:grid-cols-3">
+          <article class="reveal review-card">
+            <p>Место для цитаты из отзыва клиентки студии — переносится из Instagram или 2ГИС.</p>
+            <footer>Пилатес на реформере</footer>
+          </article>
+          <article class="reveal reveal-delay review-card">
+            <p>Место для второй цитаты — например, про запись без звонков и понятное расписание.</p>
+            <footer>Йога и стретчинг</footer>
+          </article>
+          <article class="reveal reveal-delay-2 review-card">
+            <p>Место для третьей цитаты — про результат за несколько недель занятий.</p>
+            <footer>Барре / Body ballet</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell pt-0">
+      <div class="mx-auto w-[min(100%-1.5rem,1280px)]">
+        <div class="reveal cta-banner">
+          <div>
+            <p class="section-kicker">Пробное занятие</p>
+            <h2 class="section-title !max-w-none">Первое занятие — лучший способ понять, подходит ли формат студии.</h2>
+            <p class="section-copy !text-white/72">
+              Выберите направление и время в расписании — место в группе бронируется сразу.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full bg-clay px-7 py-4 text-base font-semibold text-ink transition hover:-translate-y-1 hover:bg-blush">
+              Написать в Instagram
+            </a>
+            <a href="#schedule" class="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/8 px-7 py-4 text-base font-semibold text-white transition hover:-translate-y-1 hover:bg-white/12">
+              Смотреть расписание
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section-shell pt-0">
+      <div class="mx-auto grid w-[min(100%-1.5rem,1280px)] gap-6 xl:grid-cols-[minmax(0,0.84fr)_minmax(0,1.16fr)]">
+        <div class="reveal premium-panel contact-panel">
+          <p class="section-kicker">Контакты + карта</p>
+          <h2 class="section-title contact-title !max-w-none">Move On Studio</h2>
+          <p class="contact-intro">
+            Быстрый способ сориентироваться перед визитом: адрес, соцсети и удобная ссылка на карту.
+          </p>
+          <div class="contact-hero-card">
+            <span>Адрес</span>
+            <strong>Краснодар, ул. Рашпилевская, 224</strong>
+          </div>
+          <div class="mt-8 grid gap-5">
+            <div class="contact-row">
+              <span>Instagram</span>
+              <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="transition hover:text-blush">@moveon.studio</a>
+            </div>
+            <div class="contact-row">
+              <span>Запись</span>
+              <strong>Через расписание на сайте или в директ Instagram</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay contact-map-shell overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 shadow-soft">
+          <iframe
+            title="Карта Move On Studio на Рашпилевской"
+            src="https://yandex.ru/map-widget/v1/?text=Краснодар%2C%20улица%20Рашпилевская%2C%20224"
+            class="h-[28rem] w-full border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="grid gap-4 border-t border-white/10 bg-black/30 p-6 sm:grid-cols-2">
+            <a href="https://yandex.ru/maps/?text=Краснодар%2C%20улица%20Рашпилевская%2C%20224" target="_blank" rel="noreferrer" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition hover:border-blush/40 hover:bg-white/8">
+              Открыть в Яндекс Картах
+            </a>
+            <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition hover:border-blush/40 hover:bg-white/8">
+              Написать в Instagram
+            </a>
+          </div>
+          <div class="contact-map-meta">
+            <article>
+              <span>Локация</span>
+              <strong>Рашпилевская, 224</strong>
+              <p>Удобно доехать перед работой, в обеденный перерыв или вечером после рабочего дня.</p>
+            </article>
+            <article>
+              <span>Формат</span>
+              <strong>Расписание, бронь и карта в одном месте</strong>
+              <p>Сразу видно свободное время на неделе и можно построить маршрут до студии.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/8 pb-28 pt-8 md:pb-10">
+    <div class="mx-auto grid w-[min(100%-1.5rem,1280px)] gap-6 md:grid-cols-[1fr_auto] md:items-end">
+      <div>
+        <strong class="font-display text-3xl text-white">Move On Studio</strong>
+        <p class="mt-3 max-w-2xl text-sm leading-7 text-white/55">
+          Пилатес на реформере и мате, йога, барре и стретчинг на Рашпилевской, 224 в Краснодаре.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-white/60">
+        <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="transition hover:text-white">Instagram</a>
+        <a href="#schedule" class="transition hover:text-white">Расписание</a>
+        <a href="#contacts" class="transition hover:text-white">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta md:hidden">
+    <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="inline-flex flex-1 items-center justify-center rounded-full bg-clay px-5 py-3 text-sm font-semibold text-ink">Записаться</a>
+    <a href="#schedule" class="inline-flex flex-1 items-center justify-center rounded-full border border-white/10 bg-white/8 px-5 py-3 text-sm font-semibold text-white">Расписание</a>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
