@@ -102,7 +102,7 @@
         <a href="#why" class="text-sm text-white/72 transition hover:text-white">Почему мы</a>
         <a href="#reviews" class="text-sm text-white/72 transition hover:text-white">Отзывы</a>
         <a href="#contacts" class="text-sm text-white/72 transition hover:text-white">Контакты</a>
-        <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border border-clay/40 bg-clay px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-blush">
+        <a href="#booking" class="inline-flex items-center justify-center rounded-full border border-clay/40 bg-clay px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-blush">
           Записаться на пробное
         </a>
       </nav>
@@ -130,8 +130,8 @@
             </p>
 
             <div class="mt-9 flex flex-col gap-4 sm:flex-row">
-              <a href="tel:+79891209011" class="inline-flex items-center justify-center rounded-full bg-clay px-7 py-4 text-base font-semibold text-ink transition duration-300 hover:-translate-y-1 hover:bg-blush">
-                Позвонить и записаться
+              <a href="#booking" class="inline-flex items-center justify-center rounded-full bg-clay px-7 py-4 text-base font-semibold text-ink transition duration-300 hover:-translate-y-1 hover:bg-blush">
+                Записаться на пробное занятие
               </a>
               <a href="#directions" class="inline-flex items-center justify-center rounded-full border border-white/14 bg-white/8 px-7 py-4 text-base font-semibold text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/12">
                 Смотреть направления
@@ -346,15 +346,95 @@
       </div>
     </section>
 
+    <section id="booking" class="section-shell pt-0">
+      <div class="mx-auto w-[min(100%-1.5rem,1280px)]">
+        <div class="reveal max-w-3xl">
+          <p class="section-kicker">Заявка на пробное</p>
+          <h2 class="section-title">Оставьте заявку — она уйдёт прямо в WhatsApp студии.</h2>
+          <p class="section-copy">
+            Без звонка и ожидания ответа в директе: заполните форму — сообщение с именем, телефоном и выбранным направлением откроется в WhatsApp студии, останется только его отправить.
+          </p>
+        </div>
+
+        <form id="booking-form" class="reveal premium-panel mt-12 grid gap-5 lg:grid-cols-2" novalidate>
+          <div class="grid gap-2">
+            <label for="booking-name" class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Имя</label>
+            <input
+              id="booking-name"
+              name="name"
+              type="text"
+              required
+              autocomplete="name"
+              placeholder="Как к вам обращаться"
+              class="rounded-xl border border-white/12 bg-black/25 px-4 py-3 text-white placeholder:text-white/35 focus:border-clay focus:ring-clay"
+            >
+          </div>
+          <div class="grid gap-2">
+            <label for="booking-phone" class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Телефон для связи</label>
+            <input
+              id="booking-phone"
+              name="phone"
+              type="tel"
+              required
+              autocomplete="tel"
+              placeholder="+7 900 000-00-00"
+              class="rounded-xl border border-white/12 bg-black/25 px-4 py-3 text-white placeholder:text-white/35 focus:border-clay focus:ring-clay"
+            >
+          </div>
+          <div class="grid gap-2">
+            <label for="booking-direction" class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Направление</label>
+            <select
+              id="booking-direction"
+              name="direction"
+              required
+              class="rounded-xl border border-white/12 bg-black/25 px-4 py-3 text-white focus:border-clay focus:ring-clay"
+            >
+              <option value="" disabled selected>Выберите направление</option>
+              <option>Пилатес на реформере</option>
+              <option>Пилатес мат / Full Body</option>
+              <option>Стретчинг / стретчинг в гамаках</option>
+              <option>Хатха-йога / йога в гамаках</option>
+              <option>Барре / Low body</option>
+              <option>Здоровая спина</option>
+              <option>Body ballet</option>
+              <option>Индивидуальная тренировка</option>
+            </select>
+          </div>
+          <div class="grid gap-2">
+            <label for="booking-time" class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Удобное время</label>
+            <input
+              id="booking-time"
+              name="time"
+              type="text"
+              autocomplete="off"
+              placeholder="например, вторник вечером"
+              class="rounded-xl border border-white/12 bg-black/25 px-4 py-3 text-white placeholder:text-white/35 focus:border-clay focus:ring-clay"
+            >
+          </div>
+          <div class="lg:col-span-2">
+            <button
+              type="submit"
+              class="inline-flex w-full items-center justify-center rounded-full bg-clay px-7 py-4 text-base font-semibold text-ink transition duration-300 hover:-translate-y-1 hover:bg-blush sm:w-auto"
+            >
+              Отправить заявку в WhatsApp
+            </button>
+            <p class="mt-3 text-xs leading-5 text-white/45" id="booking-hint">
+              Нажимая кнопку, вы откроете WhatsApp с готовым сообщением для студии — останется только его отправить.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <section id="why" class="section-shell pt-0">
       <div class="mx-auto grid w-[min(100%-1.5rem,1280px)] gap-5 lg:grid-cols-2">
         <article class="reveal mood-panel">
           <div>
-            <p class="section-kicker">Онлайн-запись</p>
-            <h2 class="section-title !max-w-none">Свободные места видно сразу, без переписки в директе.</h2>
+            <p class="section-kicker">Заявка вместо переписки</p>
+            <h2 class="section-title !max-w-none">Готовое сообщение в WhatsApp вместо долгого диалога в директе.</h2>
           </div>
           <p class="section-copy">
-            Клиент выбирает направление, день и время в расписании на сайте — бронь занятия подтверждается сразу, а администратор не тратит вечер на ответы одним и тем же вопросом «а места есть?».
+            Клиент выбирает направление и удобное время в форме на сайте — в WhatsApp студии сразу приходит структурированная заявка, а не разрозненные вопросы «а какое расписание?» в директе.
           </p>
         </article>
 
@@ -462,7 +542,7 @@
             </div>
             <div class="contact-row">
               <span>Запись</span>
-              <strong>По телефону, через расписание на сайте или в директ Instagram</strong>
+              <strong>По телефону, через форму заявки на сайте или в директ Instagram</strong>
             </div>
           </div>
         </div>
@@ -518,8 +598,8 @@
   </footer>
 
   <div class="mobile-cta md:hidden">
-    <a href="tel:+79891209011" class="inline-flex flex-1 items-center justify-center rounded-full bg-clay px-5 py-3 text-sm font-semibold text-ink">Позвонить</a>
-    <a href="https://www.instagram.com/moveon.studio/" target="_blank" rel="noreferrer" class="inline-flex flex-1 items-center justify-center rounded-full border border-white/10 bg-white/8 px-5 py-3 text-sm font-semibold text-white">Instagram</a>
+    <a href="#booking" class="inline-flex flex-1 items-center justify-center rounded-full bg-clay px-5 py-3 text-sm font-semibold text-ink">Записаться</a>
+    <a href="tel:+79891209011" class="inline-flex flex-1 items-center justify-center rounded-full border border-white/10 bg-white/8 px-5 py-3 text-sm font-semibold text-white">Позвонить</a>
   </div>
 
   <script src="./script.js"></script>

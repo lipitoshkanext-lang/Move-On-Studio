@@ -71,3 +71,32 @@ const syncHeader = () => {
 
 syncHeader();
 window.addEventListener("scroll", syncHeader, { passive: true });
+
+const STUDIO_WHATSAPP_NUMBER = "79891209011";
+const bookingForm = document.querySelector("#booking-form");
+
+if (bookingForm) {
+  bookingForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const data = new FormData(bookingForm);
+    const name = data.get("name")?.toString().trim() ?? "";
+    const phone = data.get("phone")?.toString().trim() ?? "";
+    const direction = data.get("direction")?.toString().trim() ?? "";
+    const time = data.get("time")?.toString().trim() ?? "";
+
+    const lines = [
+      "Здравствуйте! Хочу записаться на пробное занятие в Move On Studio.",
+      `Имя: ${name}`,
+      `Телефон для связи: ${phone}`,
+      `Направление: ${direction}`,
+    ];
+
+    if (time) {
+      lines.push(`Удобное время: ${time}`);
+    }
+
+    const message = encodeURIComponent(lines.join("\n"));
+    window.open(`https://wa.me/${STUDIO_WHATSAPP_NUMBER}?text=${message}`, "_blank", "noopener,noreferrer");
+  });
+}
